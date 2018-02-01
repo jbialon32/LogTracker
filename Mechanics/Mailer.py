@@ -18,7 +18,7 @@ from email.mime.base import MIMEBase
 from email import encoders
 
 def Mailer():
-    file = open("text.txt" , 'r')
+    file = open("Mechanics/text.txt" , 'r')
     whatIsThis = file.readline()
     sendingAddress = file.readline()
     recievingAddress = file.readline()
@@ -38,7 +38,7 @@ def Mailer():
     message.attach(MIMEText(body, 'plain'))
     
     # Setups Excel file for attachment
-    workbook = 'Log.xlsx'
+    workbook = 'Mechanics/Log.xlsx'
     attachment = open(workbook, 'rb')
     part = MIMEBase('application', 'octet-stream')
     
